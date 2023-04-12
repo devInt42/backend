@@ -1,0 +1,15 @@
+// 예시 테이블
+
+CREATE TABLE `example` (
+	`seq` INT(11) NOT NULL AUTO_INCREMENT COMMENT '시퀀스 PK',
+	`name` VARCHAR(32) NOT NULL DEFAULT '0' COMMENT '이름' COLLATE 'latin1_swedish_ci',
+	`birth` DATE NULL DEFAULT NULL COMMENT '생년월일',
+	`sex` VARCHAR(4) NOT NULL DEFAULT '0' COMMENT '성별' COLLATE 'latin1_swedish_ci',
+	`phone` VARCHAR(32) NOT NULL DEFAULT '0' COMMENT '핸드폰번호' COLLATE 'latin1_swedish_ci',
+	`addr` VARCHAR(256) NOT NULL DEFAULT '0' COMMENT '주소' COLLATE 'latin1_swedish_ci',
+	`email` VARCHAR(64) NOT NULL DEFAULT '0' COMMENT '이메일' COLLATE 'latin1_swedish_ci',
+	PRIMARY KEY (`seq`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
